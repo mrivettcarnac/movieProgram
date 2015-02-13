@@ -80,23 +80,31 @@
 			}]; //end of kubrik movie listing
 			
 			/*
-			 * loop to console.log each item in kumbrikMovies
+			 * A function to sort movies into good (up to one nomination or win) 
+			 * and great (more than one nomination or win).
 			 * */
+			
+			function sortMovies(filmographyToSort){
 			
 			var goodMovies = [];
 			var greatMovies = [];
 			
 			for(var i=0; i<15; i++){
 				
-				var currentDirector = kubrickMovies[i];
+				/*
+				 *created label "currentFilmography" so I don't have to repeat myself. 
+				 * used "currentFilmography" because the function will sort through multiple filmographies
+				 */
 				
-				if(currentDirector.nomsAndWins > 1){
+				var currentFilmography = filmographyToSort[i]; 
+				
+				if(currentFilmography.nomsAndWins > 1){
 					
-					greatMovies.push(currentDirector);
+					greatMovies.push(currentFilmography);
 					
 				}else{
 					
-					goodMovies.push(currentDirector);
+					goodMovies.push(currentFilmography);
 					
 				}; //end of "if, else" statement
 					
@@ -109,6 +117,10 @@
 			console.log("More than one nominations or wins");
 			
 			console.log(greatMovies);
+			
+		}; //end of sortMovies function
+			
+			
 			
 		</script>
 	</body>
