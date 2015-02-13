@@ -83,17 +83,32 @@
 			 * loop to console.log each item in kumbrikMovies
 			 * */
 			
+			var goodMovies = [];
+			var greatMovies = [];
+			
 			for(var i=0; i<15; i++){
 				
 				var currentDirector = kubrickMovies[i];
 				
 				if(currentDirector.nomsAndWins > 1){
 					
-					console.log(currentDirector);
+					greatMovies.push(currentDirector);
 					
-				}; //end of "if" statement
+				}else{
 					
-			}; //end of loop to console.log each object in kubrickMovies
+					goodMovies.push(currentDirector);
+					
+				}; //end of "if, else" statement
+					
+			}; //end of "loop" 
+			
+			console.log("One or fewer nominations or wins");
+			
+			console.log(goodMovies);
+			
+			console.log("More than one nominations or wins");
+			
+			console.log(greatMovies);
 			
 		</script>
 	</body>
