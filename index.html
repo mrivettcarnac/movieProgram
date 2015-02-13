@@ -150,19 +150,23 @@
 					
 			}; //end of "loop" 
 			
-			console.log("Up to three nominations or wins");
-			
-			console.log(goodMovies);
-			
-			console.log("More than three nominations or wins");
-			
-			console.log(greatMovies);
+			return(goodMovies);
+			return(greatMovies);
 			
 		}; //end of sortMovies function
 		
-		sortMovies(kubrickMovies);
-		sortMovies(tarantinoMovies);	
+		var sortKubrik = sortMovies(kubrickMovies); 
 			
+			console.log("Kubrik");
+			
+			console.log(sortKubrik);
+			
+		var sortTarantino = sortMovies(tarantinoMovies)
+		
+			console.log("Tarantino");
+		
+			console.log(sortTarantino);
+		
 			
 		</script>
 	</body>
