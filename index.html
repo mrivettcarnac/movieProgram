@@ -14,23 +14,7 @@
 		 * total number of bafta and oscar nominations and the year released.
 		 * Soure of information, IMDB
 		 */
-			var kubrickMovies = [{
-					title : "Days_of_Flight",
-					nomsAndWins : 0,
-					year : 1951
-				}, {
-					title : "Flying_Padre",
-					nomsAndWins : 0,
-					year : 1951
-				}, {	
-					title : "Fear_and_Desire",
-					nomsAndWins : 0,
-					year : 1953
-				}, {
-					title : "The_Seafarers",
-					nomsAndWins : 0,
-					year : 1953
-				}, {
+			var kubrickMovies = [{	
 					title : "Killers_Kiss",
 					nomsAndWins : 0,
 					year : 1955
@@ -85,23 +69,59 @@
 		 * total number of bafta and oscar nominations and the year released.
 		 * Source of information, IMDB
 		 */
-			var mcQueenMovies = [{
-					title : "Hunger",
-					nomsAndWins : 2,
-					year : 2008
+			var tarantinoMovies = [{
+					title : "My_Best_Friends_Birthday",
+					nomsAndWins : 0,
+					year : 1987
 				}, {
-					title : "Shame",
-					nomsAndWins : 2,
-					year : 2011
+					title : "Reservoir_Dogs",
+					nomsAndWins : 0,
+					year : 1992
 				}, {
-					title : "12_Years_a_Slave",
-					nomsAndWins : 19,
-					year : 2013
-			}]: //end of McQueen's movies
+					title : "Pulp_Fiction",
+					nomsAndWins : 16,
+					year : 1994
+				}, {
+					title : "Four_Rooms",
+					nomsAndWins : 0,
+					year : 1995
+				}, {
+					title : "Jackie_Brown",
+					nomsAndWins : 1,
+					year : 1997
+				}, {
+					title : "Kill_Bill_Vol_1",
+					nomsAndWins : 5,
+					year : 2003
+				}, {
+					title : "Kill_Bill_Vol_2",
+					nomsAndWins : 0,
+					year : 2004
+				}, {
+					title : "Sin_City",
+					nomsAndWins : 0,
+					year : 2005
+				}, {
+					title : "Grind_House",
+					nomsAndWins : 0,
+					year : 2007
+				}, {
+					title : "Death_Proof",
+					nomsAndWins : 0,
+					year : 2007
+				}, {
+					title : "Inglourious_Basterds",
+					nomsAndWins : 14,
+					year : 2009
+				}, {
+					title : "dJango_Unchained",
+					nomsAndWins : 10,
+					year : 2012
+			}]; //end of Tarantino's movie listing
 			
 			/*
-			 * A function to sort movies into good (up to one nomination or win) 
-			 * and great (more than one nomination or win).
+			 * A function to sort movies into good (up to three nomination or win) 
+			 * and great (more than three nomination or win).
 			 * */
 			
 			function sortMovies(filmographyToSort){
@@ -109,7 +129,7 @@
 			var goodMovies = [];
 			var greatMovies = [];
 			
-			for(var i=0; i<15; i++){
+			for(var i=0; i<12; i++){
 				
 				/*
 				 *created label "currentFilmography" so I don't have to repeat myself. 
@@ -118,7 +138,7 @@
 				
 				var currentFilmography = filmographyToSort[i]; 
 				
-				if(currentFilmography.nomsAndWins > 1){
+				if(currentFilmography.nomsAndWins > 3){
 					
 					greatMovies.push(currentFilmography);
 					
@@ -130,16 +150,18 @@
 					
 			}; //end of "loop" 
 			
-			console.log("One or fewer nominations or wins");
+			console.log("Up to three nominations or wins");
 			
 			console.log(goodMovies);
 			
-			console.log("More than one nominations or wins");
+			console.log("More than three nominations or wins");
 			
 			console.log(greatMovies);
 			
 		}; //end of sortMovies function
-			
+		
+		sortMovies(kubrickMovies);
+		sortMovies(tarantinoMovies);	
 			
 			
 		</script>
